@@ -1,0 +1,53 @@
+svg {
+  border: 1px solid black;
+  width: 800px;
+  height: 400px;
+}
+
+table, td {
+  padding: 5px;
+}
+
+.visualization-block {
+  border: 1px solid black;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.console {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.coin-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-left: 5px;
+  padding: 3px;
+  background: green;
+}
+
+.coin-button {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.remove-icon {
+  margin-left: 5px;
+  font-size: 0.8em;
+}
+
+.sort:hover, .remove-icon:hover {
+  cursor: pointer;
+}
+
+.add-currency {
+  margin-top: 10px;
+}
+
+.button-download {
+  margin-top: 10px;
+}

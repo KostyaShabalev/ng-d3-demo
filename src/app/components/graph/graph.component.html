@@ -1,0 +1,40 @@
+<p>{{message}}</p>
+{{sortReverse}}
+
+<div class="visualization-block">
+  <svg class="svg"></svg>
+  <div class="crypto-info">
+    <table>
+      <tr>
+        <th>Coin</th>
+        <th>Max Price<i class="sort fas fa-sort" (click)="sort(coinsStat, 'price')"></i></th>
+        <th>Date<i class="sort fas fa-sort" (click)="sort(coinsStat, 'date')"></i></th>
+      </tr>
+      <tr *ngFor="let coin of coinsStat">
+        <td>{{coin.name}}</td>
+        <td>{{coin.price}}</td>
+        <td>{{coin.date}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="console" *ngIf="coinsStat">
+  <div class="coin-container" *ngFor="let coin of coinsStat">
+    <div class="coin-button">
+      <div class="coin-name">{{coin.name}}</div>
+      <div class="remove">
+        <i class="far fa-trash-alt remove-icon" (click)="removeCoinHistory(coin.name)"></i>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<form class="form add-currency">
+  Add currency
+  <select class="select-currency select" (change)="selectOption($event)">
+    <option class="currency-option" value="{{currency}}" *ngFor="let currency of currenciesToAdd">{{currency}}</option>
+  </select>
+</form>
+
+<button class="button-download button" (click)="download()">Download Chart</button>
